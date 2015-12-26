@@ -291,16 +291,12 @@ td { vertical-align: top; }
   p, h2, h3 { orphans: 3; widows: 3; }
   h2, h3 { page-break-after: avoid; }
 }
+@media sreen and (max-width:768px){
+    #cf_menu{
+        position: fixed !important;
+        top: 25px !important;
+        left: 25px !important;
+    }
+    
+}
 
-
-.demo_content{position:relative; width:750px; margin:auto; padding:20px 40px 800px 40px; background:#84d8d3;}
-.demo_content hr{padding:0; margin:20px 0 0 0; border-top:1px solid #68b5b1; border-bottom:1px solid #b8ebe8; border-left:none; border-right:none; clear:both;}
-.demo_content h1{font-family:'Lobster', Arial, Helvetica, sans-serif; font-size:40px; font-weight:normal; color:#333; margin:20px 0 0 0; text-shadow: 0px 1px 1px #eee;}
-.demo_content h2{font-family:'Lobster', Arial, Helvetica, sans-serif; font-size:22px; font-weight:normal; margin:40px 0 20px 0; color:#f33;}
-.demo_content h3{font-family:'Lobster', Arial, Helvetica, sans-serif; font-size:16px; font-weight:normal; color:#333; margin:20px 0;}
-.demo_content p{font-family:Arial, Helvetica, sans-serif; font-size:12px; color:#333; margin:0 0 20px 0; clear:both; line-height:18px;}
-.demo_content p.inner{padding:20px; background:#333; color:#fff; -moz-border-radius:4px; -khtml-border-radius:4px; -webkit-border-radius:4px; border-radius:4px;}
-.demo_content p.inner_white{padding:20px; background:#fff; color:#333; -moz-border-radius:4px; -khtml-border-radius:4px; -webkit-border-radius:4px; border-radius:4px;}
-.demo_content blockquote{font-family:'Lobster',Arial, Helvetica, sans-serif; font-size:18px; color:#fff; margin:40px 0 30px 0; padding:0 80px 0 0;}
-.demo_content .bqstart {float:left; font-size:600%; color:#fff; margin:-35px 20px 0 0;}
-.demo_content .bqend {float:right; font-size:600%; color:#fff; margin:-25px -80px 0 0; height:60px;}

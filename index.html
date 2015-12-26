@@ -22,6 +22,13 @@
 
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/malihu.cfm.css">
+  <link rel="stylesheet" href="css/foundation.css">
+  <link rel="stylesheet" href="css/custome.css">
+  
+  <!-- All Web fonts -->
+  <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Kelly+Slab" />
+  <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Just+Another+Hand" />
+  <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Righteous" />
 
   <!-- More ideas for your <head> here: h5bp.com/d/head-Tips -->
 
@@ -33,7 +40,36 @@
   <script>window.jQuery || document.write('<script src="js/libs/jquery-1.7.1.min.js"><\/script>')</script>
   <script src="js/libs/modernizr-2.5.3.min.js"></script>
   <script type="text/javascript" src="js/libs/jquery.easing.1.3.js"></script>
-  
+  <script type="text/javascript" src="js/vunit-0.2.0.min.js"></script>
+  <script>
+        new vUnit({
+            CSSMap: {
+                // The selector (VUnit will create rules ranging from .selector1 to .selector100)
+                '.vh_height': {
+                    // The CSS property (any CSS property that accepts px as units)
+                    property: 'height',
+                    // What to base the value on (vh, vw, vmin or vmax)
+                    reference: 'vh'
+                },
+                // Wanted to have a font-size based on the viewport width? You got it.
+                '.vw_font-size': {
+                    property: 'font-size',
+                    reference: 'vw'
+                },
+                // vmin and vmax can be used as well.
+                '.vmin_margin-top': {
+                    property: 'margin-top',
+                    reference: 'vmin'
+                },
+                // vh for margin top
+                '.vh_margin-top': {
+                    property: 'margin-top',
+                    reference: 'vh'
+                }
+            }
+           
+        }).init(); // call the public init() method
+    </script>
 </head>
 <body>
   <!-- Prompt IE 6 users to install Chrome Frame. Remove this if you support IE 6.
@@ -52,7 +88,6 @@
                 	<li><a href="#" onclick="Animate2id('#web');return false">Web</a></li>
                     <li><a href="#" onclick="Animate2id('#print');return false">Print</a></li>
 				</ul>-->
-			<li><a href="#" onclick="Animate2id('#blog');return false">Blog</a></li>
 		<!--	<li><a href="links">+ Interesting links</a>
                 <ul>
                 	<li><a href="#" onclick="Animate2id('#freebies');return false">Freebies &amp; Resources</a></li>
@@ -60,13 +95,25 @@
 				</ul>
 			</li>-->
 			<li><a href="#" onclick="Animate2id('#contact');return false">Contact</a></li>
-                        
+            <li><a href="#" onclick="Animate2id('#blog');return false">Blog</a></li>            
 		</ul>
 	</div>
 </div>
   </header>
-  <div role="main" style="height: 1000px;">
+  <div role="main">
+      <div class="expanded row vh_height100 hero" id="home">
+          <div class="overlayBlack"></div>
+          <p class="introText text-center vh_margin-top50 vw_font-size6">Welcome</p>
+      </div>
+      <div class="expanded row vh_height100 hero1" id="about">
 
+      </div>
+      <div class="expanded row vh_height100 hero2" id="work">
+
+      </div>
+      <div class="expanded row vh_height100 hero3" id="contact">
+
+      </div>
   </div>
   <footer>
  
@@ -98,5 +145,7 @@
     $menu_hide_easing="easeInExpo"; //menu close animation easing type
     </script>
     <script type="text/javascript" src="js/malihu.jquery.cfm.js"></script>
+    <script type="text/javascript" src="js/libs/foundation.min.js"></script>
+    <script type="text/javascript" src="js/what-input.min.js"></script>
 </body>
 </html>
